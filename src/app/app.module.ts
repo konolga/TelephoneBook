@@ -1,32 +1,41 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-//import {HttpModule} from '@angular/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { TextMaskModule } from 'angular2-text-mask';
 
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
-import { contactsListComponent } from './contacts/contacts-list/contacts-list.component';
-import { DeleteComponent } from './contact/delete/delete.component';
-import { UpdateComponent } from './contact/update/update.component';
+import { ContactsListComponent } from './contacts/contacts-list/contacts-list.component';
 import { CreateComponent } from './contact/create/create.component';
 import { SearchComponent } from './search/search.component';
 import { DetailsComponent } from './contact/details/details.component';
 import { HeaderComponent } from './header/header.component';
-
+import { ContactsComponent } from './contacts/contacts.component';
+import {MaterialModule} from './material.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
-    contactsListComponent,
-    DeleteComponent,
-    UpdateComponent,
+    ContactsListComponent,
     CreateComponent,
     DetailsComponent,
     SearchComponent,
-    HeaderComponent
+    HeaderComponent,
+    ContactsComponent,
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    FormsModule,
+    HttpClientModule,
+    TextMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]

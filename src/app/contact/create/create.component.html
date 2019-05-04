@@ -1,3 +1,42 @@
-<p>
-  create works!
-</p>
+
+<div class="col-md-12 col-xs-12">
+
+    <mat-card>
+        <form (submit)="onSaveContact(postForm)" #postForm="ngForm"
+        *ngIf="!isLoading">
+          <mat-form-field>
+            <input
+              matInput
+              type="text"
+              name="name"
+              [ngModel]="contact?.name"
+              required
+              minlength="3"
+              placeholder="Contact name"
+              #title="ngModel">
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              name="telephone"
+              type="text"
+              [ngModel]="contact?.telephone"
+              required
+              placeholder="(123) 456-7890"
+              [textMask]="{mask: mask}"
+              pattern="\(\d{3}\)\d{3}-\d{4}"
+              #content="ngModel">
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit">SAVE</button>
+        </form>
+      </mat-card>
+
+
+</div>
+
+
+
+
+
+
+

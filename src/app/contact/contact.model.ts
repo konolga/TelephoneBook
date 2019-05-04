@@ -1,10 +1,12 @@
-export class Contact{
+export class Contact {
+  public id: string;
   public name: string;
-  public telephone: number;
+  public telephone: string;
 
-  constructor (name: string, telephone: number){
+  constructor(id: string, name: string, telephone: string) {
+    this.id = id;
     this.name = name;
     this.telephone = telephone;
     }
-};
+}
 

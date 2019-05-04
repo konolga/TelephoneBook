@@ -1,10 +1,19 @@
-<app-header></app-header>
+<!--
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+<main>
+  <div >
+    <div class="row">
+        <div class="col-md-12">
+          <app-contacts *ngIf="loadedFeature === 'all-contacts'"></app-contacts>
+          <app-create *ngIf="loadedFeature !== 'all-contacts'"></app-create>
+        </div>
+      </div>
+    </div>
+  </main> -->
 
-<div class="row">
-    <div class="col-md-5">
-      <app-contacts-list></app-contacts-list>
-    </div>
-    <div class="col-md-7">
-      <app-details></app-details>
-    </div>
-  </div>
+
+
+  <app-header></app-header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>

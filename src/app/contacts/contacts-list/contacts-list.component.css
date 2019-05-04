@@ -1,0 +1,12 @@
+.header-image {
+  background-image: url('../../../assets/phone-img.jpg');
+  background-size: cover;
+  }
+
+  mat-card-title:hover{
+    cursor:pointer
+  }
+
+  mat-card{
+    max-width: 400px;
+  }

@@ -1,0 +1,7 @@
+.img-responsive {
+  content: url('../../../assets/Contacts.jpg');
+  max-width: 100px;
+  }
+  mat-card{
+    max-width: 400px;
+  }

@@ -1,16 +1,22 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a href="#" class="navbar-brand">Telephone book</a>
-    </div>
-    <div class="navbar-default">
-      <ul class="nav navbar-nav">
-        <li class="a" href="#">Contacts</li>
-        <li class="a" href="#">New contact</li>
-      </ul>
-    </div>
 
-  </div>
-</nav>
+    <mat-toolbar color="primary">
 
 
+         <!--  <button mat-button (click)="onSelect('all-contacts')">All contacts </button>
+          <button mat-button (click)="onSelect('new-contact')">New contact </button> -->
+
+
+              <a mat-button routerLink="/"
+              routerLinkActive="mat-accent">
+                My Contacts
+              </a>
+
+            <span class="spacer"></span>
+
+                <a mat-button routerLink="/create"
+                routerLinkActive="mat-accent">
+             New Contact
+              </a>
+
+
+    </mat-toolbar>
