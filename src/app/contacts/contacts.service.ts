@@ -4,6 +4,7 @@ import { Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { Contact } from '../contact/contact.model';
+const BACKEND_URL = environment.apiUrl;
 
 @Injectable({ providedIn: 'root' })
 export class ContactsService {
@@ -15,7 +16,7 @@ export class ContactsService {
   getContacts() {
     this.http
       .get<{contacts: any}>(
-        'http://localhost:8080/api/contacts'
+        BACKEND_URL + 'api/contacts'
       )
       .pipe(map((data) => {
         return data.contacts.map(contact => {
@@ -46,7 +47,7 @@ export class ContactsService {
   addContact(name: string, telephone: string) {
     const contact: Contact = {id: null, name: name, telephone: telephone };
     this.http
-      .post<{ message: string, contactId: string }>('http://localhost:8080/api/contacts', contact)
+      .post<{ message: string, contactId: string }>(BACKEND_URL + 'api/contacts', contact)
       .subscribe(responseData => {
         const id = responseData.contactId;
         contact.id = id;
@@ -57,7 +58,7 @@ export class ContactsService {
   }
 
   deleteContact(contactId: string) {
-    this.http.delete("http://localhost:8080/api/contacts/" + contactId)
+    this.http.delete(BACKEND_URL + 'api/contacts/" + contactId)
       .subscribe(() => {
         const contactsUpdated = this.contacts.filter(contact => contact.id !== contactId);
         this.contacts = contactsUpdated;
@@ -68,7 +69,7 @@ export class ContactsService {
 
   getContact(id: string) {
     return this.http.get<{ _id: string; name: string; telephone: string }>(
-      'http://localhost:8080/api/contacts/' + id
+      BACKEND_URL + 'api/contacts/' + id
     );
   }
 
@@ -76,7 +77,7 @@ export class ContactsService {
   updateContact(id: string, name: string, telephone: string) {
     const contact: Contact = { id: id, name: name, telephone: telephone };
     this.http
-      .put('http://localhost:8080/api/contacts/' + id, contact)
+      .put(BACKEND_URL + 'api/contacts/' + id, contact)
       .subscribe(response => {
         const updatedContacts = [...this.contacts];
         const oldContactIndex = updatedContacts.findIndex(p => p.id === contact.id);
