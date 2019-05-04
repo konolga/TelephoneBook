@@ -32,6 +32,13 @@ export class ContactsService {
       });
   }
 
+  filterContacts(searchString: string){
+    this.getContacts();
+    return  this.contacts.filter(contact => contact.name.toLowerCase().indexOf(searchString.toLowerCase()) !== -1 )
+
+  }
+
+
   getContactsUpdateListener() {
     return this.contactsUpdated.asObservable();
   }

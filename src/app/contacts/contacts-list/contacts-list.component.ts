@@ -1,7 +1,8 @@
-import { Component, OnInit, EventEmitter, Output, OnDestroy } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, OnDestroy, Input } from '@angular/core';
 import {Contact} from '../../contact/contact.model';
 import { ContactsService } from '../../contacts/contacts.service';
 import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-contacts-list',
@@ -11,17 +12,35 @@ import { Subscription } from 'rxjs';
 export class ContactsListComponent implements OnInit, OnDestroy {
 contacts: Contact[] = [];
 private contactsSub: Subscription;
+filteredContacts: Contact[] = [];
+
+
 @Output() contactWasSelected = new EventEmitter<Contact>();
 
 constructor(public contactsService: ContactsService) { }
 
-  ngOnInit() {
-    this.contactsService.getContacts();
+private _searchTerm: string;
+get searchTerm(): string{
+  return this._searchTerm;
+}
+set searchTerm(value: string){
+this._searchTerm = value;
+this.filteredContacts = this.contactsService.filterContacts(value);
+}
+
+
+
+ngOnInit() {
+
+  this.contactsService.getContacts();
     this.contactsSub = this.contactsService.getContactsUpdateListener()
       .subscribe((contacts: Contact[]) => {
-        this.contacts = contacts;
+        if(this.searchTerm){ this.contacts = this.filteredContacts }
+        else {this.contacts = contacts;}
       });
 }
+
+
 
 
 onSelected(contact: Contact) {
@@ -33,5 +52,6 @@ onSelected(contact: Contact) {
 ngOnDestroy() {
  this.contactsSub.unsubscribe();
 }
+
 
 }

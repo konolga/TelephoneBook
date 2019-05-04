@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ContactsListComponent } from './contacts/contacts-list/contacts-list.component';
 import { CreateComponent } from './contact/create/create.component';
-import { SearchComponent } from './search/search.component';
 import { DetailsComponent } from './contact/details/details.component';
 import { HeaderComponent } from './header/header.component';
 import { ContactsComponent } from './contacts/contacts.component';
@@ -23,7 +22,6 @@ import { AppRoutingModule } from './app-routing.module';
     ContactsListComponent,
     CreateComponent,
     DetailsComponent,
-    SearchComponent,
     HeaderComponent,
     ContactsComponent,
 
