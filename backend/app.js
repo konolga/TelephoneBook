@@ -1,13 +1,12 @@
 const express = require('express');
 const app = express();
-const Contact = require('./models/contact.model')
+const path = require('path')
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const contactsRoutes = require("./routes/contacts");
 
 mongoose
-  .connect(
-    "mongodb+srv://admin:G0RXLw5UUm128rks@cluster0-jat0j.mongodb.net/test?retryWrites=true", { useNewUrlParser: true }
+  .connect(process.env.MONGO_URI, { useNewUrlParser: true }
   )
   .then(() => {
     console.log("Connected to MongoDb!");
@@ -19,6 +18,7 @@ mongoose
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use("/", express.static(path.join(__dirname, "angular")));
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -32,8 +32,10 @@ app.use((req, res, next) => {
   );
   next();
 });
-
+app.use("/", contactsRoutes);
 app.use("/api/contacts", contactsRoutes);
-
+app.use((req, res, next)=>{
+res.sendFile(path.join(__dirname, "angular", "index.html"))
+})
 
 module.exports = app;
