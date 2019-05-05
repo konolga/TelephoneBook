@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: "https://konolga.github.io/TelephoneBook/"
+  apiUrl: 'http://Telephonebook.us-east-2.elasticbeanstalk.com'
 };
