@@ -12,8 +12,9 @@ mongoose
   .then(() => {
     console.log("Connected to MongoDb!");
   })
-  .catch(() => {
+  .catch((error) => {
     console.log("Connection to MongoDb failed!");
+    console.log(error)
   });
 
 app.use(bodyParser.json());
