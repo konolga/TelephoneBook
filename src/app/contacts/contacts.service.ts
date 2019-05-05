@@ -4,6 +4,7 @@ import { Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { Contact } from '../contact/contact.model';
+import { environment } from '../../environments/environment';
 const BACKEND_URL = environment.apiUrl;
 
 @Injectable({ providedIn: 'root' })
@@ -58,7 +59,7 @@ export class ContactsService {
   }
 
   deleteContact(contactId: string) {
-    this.http.delete(BACKEND_URL + 'api/contacts/" + contactId)
+    this.http.delete(BACKEND_URL + 'api/contacts/' + contactId)
       .subscribe(() => {
         const contactsUpdated = this.contacts.filter(contact => contact.id !== contactId);
         this.contacts = contactsUpdated;

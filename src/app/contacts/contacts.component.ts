@@ -7,11 +7,11 @@ import {Contact} from '../contact/contact.model';
   styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
-@Input() contactWasSelected: Contact;
+@Input() selectedContact: Contact;
 
 
   constructor() { }
   ngOnInit() {
-    
+
   }
 }
