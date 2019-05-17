@@ -228,7 +228,7 @@ var Contact = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "mat-card{\r\n  width: 400px;\r\n}\r\nmat-form-field,\r\ntextarea {\r\n  width: 350px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udGFjdC9jcmVhdGUvY3JlYXRlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0FBQ2Q7QUFDQTs7RUFFRSxZQUFZO0FBQ2QiLCJmaWxlIjoic3JjL2FwcC9jb250YWN0L2NyZWF0ZS9jcmVhdGUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIm1hdC1jYXJke1xyXG4gIHdpZHRoOiA0MDBweDtcclxufVxyXG5tYXQtZm9ybS1maWVsZCxcclxudGV4dGFyZWEge1xyXG4gIHdpZHRoOiAzNTBweDtcclxufVxyXG4iXX0= */"
+module.exports = "mat-card{\n  width: 400px;\n}\nmat-form-field,\ntextarea {\n  width: 350px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udGFjdC9jcmVhdGUvY3JlYXRlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0FBQ2Q7QUFDQTs7RUFFRSxZQUFZO0FBQ2QiLCJmaWxlIjoic3JjL2FwcC9jb250YWN0L2NyZWF0ZS9jcmVhdGUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIm1hdC1jYXJke1xuICB3aWR0aDogNDAwcHg7XG59XG5tYXQtZm9ybS1maWVsZCxcbnRleHRhcmVhIHtcbiAgd2lkdGg6IDM1MHB4O1xufVxuIl19 */"
 
 /***/ }),
 
@@ -324,7 +324,7 @@ var CreateComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".img-responsive {\r\n  content: url('Contacts.jpg');\r\n  max-width: 100px;\r\n  }\r\n  mat-card{\r\n    max-width: 400px;\r\n  }\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udGFjdC9kZXRhaWxzL2RldGFpbHMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLDRCQUE0QztFQUM1QyxnQkFBZ0I7RUFDaEI7RUFDQTtJQUNFLGdCQUFnQjtFQUNsQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRhY3QvZGV0YWlscy9kZXRhaWxzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaW1nLXJlc3BvbnNpdmUge1xyXG4gIGNvbnRlbnQ6IHVybCgnLi4vLi4vLi4vYXNzZXRzL0NvbnRhY3RzLmpwZycpO1xyXG4gIG1heC13aWR0aDogMTAwcHg7XHJcbiAgfVxyXG4gIG1hdC1jYXJke1xyXG4gICAgbWF4LXdpZHRoOiA0MDBweDtcclxuICB9XHJcbiJdfQ== */"
+module.exports = ".img-responsive {\n  content: url('Contacts.jpg');\n  max-width: 100px;\n  }\n  mat-card{\n    max-width: 400px;\n  }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udGFjdC9kZXRhaWxzL2RldGFpbHMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLDRCQUE0QztFQUM1QyxnQkFBZ0I7RUFDaEI7RUFDQTtJQUNFLGdCQUFnQjtFQUNsQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRhY3QvZGV0YWlscy9kZXRhaWxzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaW1nLXJlc3BvbnNpdmUge1xuICBjb250ZW50OiB1cmwoJy4uLy4uLy4uL2Fzc2V0cy9Db250YWN0cy5qcGcnKTtcbiAgbWF4LXdpZHRoOiAxMDBweDtcbiAgfVxuICBtYXQtY2FyZHtcbiAgICBtYXgtd2lkdGg6IDQwMHB4O1xuICB9XG4iXX0= */"
 
 /***/ }),
 
@@ -393,7 +393,7 @@ var DetailsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".header-image {\r\n  background-image: url('phone-img.jpg');\r\n  background-size: cover;\r\n  }\r\n\r\n  mat-card-title:hover{\r\n    cursor:pointer\r\n  }\r\n\r\n  mat-card{\r\n    max-width: 400px;\r\n  }\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udGFjdHMvY29udGFjdHMtbGlzdC9jb250YWN0cy1saXN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxzQ0FBc0Q7RUFDdEQsc0JBQXNCO0VBQ3RCOztFQUVBO0lBQ0U7RUFDRjs7RUFFQTtJQUNFLGdCQUFnQjtFQUNsQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRhY3RzL2NvbnRhY3RzLWxpc3QvY29udGFjdHMtbGlzdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhlYWRlci1pbWFnZSB7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi8uLi8uLi9hc3NldHMvcGhvbmUtaW1nLmpwZycpO1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgfVxyXG5cclxuICBtYXQtY2FyZC10aXRsZTpob3ZlcntcclxuICAgIGN1cnNvcjpwb2ludGVyXHJcbiAgfVxyXG5cclxuICBtYXQtY2FyZHtcclxuICAgIG1heC13aWR0aDogNDAwcHg7XHJcbiAgfVxyXG4iXX0= */"
+module.exports = ".header-image {\n  background-image: url('phone-img.jpg');\n  background-size: cover;\n  }\n\n  mat-card-title:hover{\n    cursor:pointer\n  }\n\n  mat-card{\n    max-width: 400px;\n  }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udGFjdHMvY29udGFjdHMtbGlzdC9jb250YWN0cy1saXN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxzQ0FBc0Q7RUFDdEQsc0JBQXNCO0VBQ3RCOztFQUVBO0lBQ0U7RUFDRjs7RUFFQTtJQUNFLGdCQUFnQjtFQUNsQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRhY3RzL2NvbnRhY3RzLWxpc3QvY29udGFjdHMtbGlzdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhlYWRlci1pbWFnZSB7XG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vLi4vLi4vYXNzZXRzL3Bob25lLWltZy5qcGcnKTtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgfVxuXG4gIG1hdC1jYXJkLXRpdGxlOmhvdmVye1xuICAgIGN1cnNvcjpwb2ludGVyXG4gIH1cblxuICBtYXQtY2FyZHtcbiAgICBtYXgtd2lkdGg6IDQwMHB4O1xuICB9XG4iXX0= */"
 
 /***/ }),
 
@@ -558,15 +558,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
 
 
 
 
 
 
-
-var BACKEND_URL = _environments_environment__WEBPACK_IMPORTED_MODULE_6__["environment"].apiUrl;
+var BACKEND_URL = "http://telephonebook.us-east-2.elasticbeanstalk.com/";
 var ContactsService = /** @class */ (function () {
     function ContactsService(http, router) {
         this.http = http;
@@ -656,7 +654,7 @@ var ContactsService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n    <mat-toolbar color=\"primary\">\r\n\r\n\r\n         <!--  <button mat-button (click)=\"onSelect('all-contacts')\">All contacts </button>\r\n          <button mat-button (click)=\"onSelect('new-contact')\">New contact </button> -->\r\n\r\n\r\n              <a mat-button routerLink=\"/\"\r\n              routerLinkActive=\"mat-accent\">\r\n                My Contacts\r\n              </a>\r\n\r\n            <span class=\"spacer\"></span>\r\n\r\n                <a mat-button routerLink=\"/create\"\r\n                routerLinkActive=\"mat-accent\">\r\n             New Contact\r\n              </a>\r\n\r\n\r\n    </mat-toolbar>\r\n"
+module.exports = "\n    <mat-toolbar color=\"primary\">\n\n\n         <!--  <button mat-button (click)=\"onSelect('all-contacts')\">All contacts </button>\n          <button mat-button (click)=\"onSelect('new-contact')\">New contact </button> -->\n\n\n              <a mat-button routerLink=\"/\"\n              routerLinkActive=\"mat-accent\">\n                My Contacts\n              </a>\n\n            <span class=\"spacer\"></span>\n\n                <a mat-button routerLink=\"/create\"\n                routerLinkActive=\"mat-accent\">\n             New Contact\n              </a>\n\n\n    </mat-toolbar>\n"
 
 /***/ }),
 
@@ -801,8 +799,8 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 var environment = {
-    production: false,
-    apiUrl: "http://localhost:8080/"
+    production: false
+    //apiUrl: 'http://localhost:8080/'
 };
 /*
  * For easier debugging in development mode, you can import the following file
@@ -849,7 +847,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\olgasi\OneDrive\GitProjects\TelephoneBook\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/olga/Documents/GitHub/TelephoneBook/src/main.ts */"./src/main.ts");
 
 
 /***/ })
