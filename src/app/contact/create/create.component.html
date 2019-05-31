@@ -27,7 +27,11 @@
               pattern="\(\d{3}\)\d{3}-\d{4}"
               #content="ngModel">
           </mat-form-field>
-          <button mat-raised-button color="primary" type="submit">SAVE</button>
+          <button
+          mat-raised-button color="primary"
+           type="submit"
+           [disabled]="onFormValidation(postForm)"
+           >SAVE</button>
         </form>
       </mat-card>
 
