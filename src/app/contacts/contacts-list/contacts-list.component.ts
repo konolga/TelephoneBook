@@ -14,16 +14,15 @@ contacts: Contact[] = [];
 private contactsSub: Subscription;
 filteredContacts: Contact[] = [];
 
-
 @Output() contactWasSelected = new EventEmitter<Contact>();
 
 constructor(public contactsService: ContactsService) { }
 
 private _searchTerm: string;
-get searchTerm(): string{
+get searchTerm(): string {
   return this._searchTerm;
 }
-set searchTerm(value: string){
+set searchTerm(value: string) {
 this._searchTerm = value;
 this.filteredContacts = this.contactsService.filterContacts(value);
 }
@@ -33,13 +32,11 @@ this.filteredContacts = this.contactsService.filterContacts(value);
 ngOnInit() {
 
   this.contactsService.getContacts();
-    this.contactsSub = this.contactsService.getContactsUpdateListener()
+  this.contactsSub = this.contactsService.getContactsUpdateListener()
       .subscribe((contacts: Contact[]) => {
-        if(this.searchTerm){ this.contacts = this.filteredContacts }
-        else {this.contacts = contacts;}
+        if(this.searchTerm) { this.contacts = this.filteredContacts } else {this.contacts = contacts;}
       });
 }
-
 
 
 

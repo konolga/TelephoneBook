@@ -12,7 +12,10 @@
       </mat-form-field>
     </form>
 
-      <mat-card *ngFor = 'let contact of contacts' (click)="onSelected(contact)">
+      <mat-card *ngFor = 'let contact of contacts; let i = index'
+                (click)="onSelected(contact)"
+                [ngClass]="{'hover-color': contact.hoverActive }"
+                (mouseover)="contact.hoverActive = !contact.hoverActive">
           <mat-card-header>
           <div mat-card-avatar class="header-image"></div>
           <mat-card-title class="list group item heading">{{contact.name}}</mat-card-title>
