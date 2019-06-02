@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import {MaterialModule} from './material.module';
 import { AppRoutingModule } from './app-routing.module';
+import { ContactsUploadComponent } from './contacts/contacts-upload/contacts-upload.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AppRoutingModule } from './app-routing.module';
     DetailsComponent,
     HeaderComponent,
     ContactsComponent,
+    ContactsUploadComponent,
 
   ],
   imports: [

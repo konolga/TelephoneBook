@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: '', component: ContactsComponent },
   { path: 'create', component: CreateComponent },
   { path: 'edit/:contactId', component: CreateComponent },
+  { path: 'upload', component: CreateComponent },
 ];
 
 @NgModule({
