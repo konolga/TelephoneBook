@@ -1,7 +1,5 @@
 const express = require("express");
-
 const Contact = require("../models/contact.model");
-
 const router = express.Router();
 
 

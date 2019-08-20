@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TextMaskModule } from 'angular2-text-mask';
+import { CommonModule } from '@angular/common';
+
+
 
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
@@ -12,9 +15,10 @@ import { CreateComponent } from './contact/create/create.component';
 import { DetailsComponent } from './contact/details/details.component';
 import { HeaderComponent } from './header/header.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import {MaterialModule} from './material.module';
+import { MaterialModule} from './material.module';
 import { AppRoutingModule } from './app-routing.module';
-import { ContactsUploadComponent } from './contacts/contacts-upload/contacts-upload.component';
+// import { UploadModule } from './upload.module';
+
 
 @NgModule({
   declarations: [
@@ -25,8 +29,7 @@ import { ContactsUploadComponent } from './contacts/contacts-upload/contacts-upl
     DetailsComponent,
     HeaderComponent,
     ContactsComponent,
-    ContactsUploadComponent,
-
+    // UploadModule
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,9 @@ import { ContactsUploadComponent } from './contacts/contacts-upload/contacts-upl
     MaterialModule,
     FormsModule,
     HttpClientModule,
-    TextMaskModule
+    TextMaskModule,
+    CommonModule,
+    // UploadModule
   ],
   providers: [],
   bootstrap: [AppComponent]

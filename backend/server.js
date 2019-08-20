@@ -1,5 +1,10 @@
 const http = require('http');
 const app = require('./app')
+const cors = require('cors')
+const corsOptions = {origin: '*', optionsSuccessStatus: 200}
+
+//const upload = require('./upload')
+
 
 
 const normalizePort = val => {
@@ -47,6 +52,12 @@ const port = normalizePort(process.env.PORT);
 app.set("port", port);
 
 const server = http.createServer(app);
+//server.use(cors(corsOptions));
 server.on("error", onError);
 server.on("listening", onListening);
-server.listen(port);
+//server.post('/upload', upload)
+
+server.listen(port, () => {
+  console.log(`Server started on ${port}!`)
+})
+
