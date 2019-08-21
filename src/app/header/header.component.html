@@ -1,29 +1,72 @@
+<mat-sidenav-container  >
 
-    <mat-toolbar color="primary">
+        <mat-sidenav #sidenav role="navigation">
+            <a  mat-list-item routerLink="/" routerLinkActive="mat-accent">
+              <mat-icon class="icon">home</mat-icon>
+              <span class="label">All contacts</span>
+            </a >
 
+            <a mat-list-item routerLink="/create" routerLinkActive="mat-accent">
+              <mat-icon class="icon">dashboard</mat-icon>
+              <span class="label">New Contact</span>
+            </a>
 
-         <!--  <button mat-button (click)="onSelect('all-contacts')">All contacts </button>
-          <button mat-button (click)="onSelect('new-contact')">New contact </button> -->
+            <a mat-list-item routerLink="/upload" routerLinkActive="mat-accent">
+              <mat-icon class="icon">dialpad</mat-icon>
+              <span class="label">Upload contacts</span>
+            </a>
 
-
-              <a mat-button routerLink="/"
-              routerLinkActive="mat-accent">
-                My Contacts
-              </a>
-
-            <span class="spacer"></span>
-
-                <a mat-button routerLink="/create"
-                routerLinkActive="mat-accent">
-             New Contact
-              </a>
-
-              <span class="spacer"></span>
-
-                <a mat-button routerLink="/upload"
-                routerLinkActive="mat-accent">
-             Upload contacts
-              </a>
+            <a mat-list-item routerLink="/logout" routerLinkActive="mat-accent">
+              <mat-icon class="icon">input</mat-icon>
+              <span class="label">LogOut</span>
+            </a>
+        </mat-sidenav>
 
 
-    </mat-toolbar>
+
+  <mat-sidenav-content>
+      <mat-toolbar color="primary">
+       <div fxHide.gt-xs>
+          <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+       <div>
+          <a routerLink="/">
+            Telephone Book
+         </a>
+       </div>
+       <div fxFlex fxLayout fxLayoutAlign="flex-end"  fxHide.xs>
+          <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+              <li>
+                  <a routerLink="/">
+                    <mat-icon class="icon">home</mat-icon>
+                    <span  class="label">All contacts</span>
+                   </a>
+              </li>
+              <li>
+                <a routerLink="/create">
+                    <mat-icon class="icon">dashboard</mat-icon>
+                    <span class="label">New Contact</span>
+                </a>
+              </li>
+              <li>
+                  <a routerLink="/upload">
+                      <mat-icon class="icon">dialpad</mat-icon>
+                      <span class="label">Upload contacts</span>
+                  </a>
+                </li>
+
+                <li>
+                    <a routerLink="/logout">
+                        <mat-icon class="icon">input</mat-icon>
+                        <span class="label">LogOut</span>
+                    </a>
+                  </li>
+          </ul>
+       </div>
+      </mat-toolbar>
+      <main>
+      </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>
