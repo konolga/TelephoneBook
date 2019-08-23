@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { Contact } from '../contact/contact.model';
+import { Contact } from '../_models/contact.model';
 import { environment } from '../../environments/environment.prod';
 const BACKEND_URL = environment.apiUrl;
 

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpRequest, HttpEventType, HttpResponse} from '@angular/common/http';
 import { Observable, Subject} from 'rxjs';
-import { environment } from '../../../environments/environment.prod';
+import { environment } from '../../environments/environment.prod';
 const BACKEND_URL = environment.apiUrl;
 
 

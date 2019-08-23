@@ -1,6 +1,6 @@
 import { Component, OnInit, Input} from '@angular/core';
-import {Contact} from '../contact.model';
-import { ContactsService } from '../../contacts/contacts.service';
+import {Contact} from '../../_models/contact.model';
+import { ContactsService } from '../../_services/contacts.service';
 
 @Component({
   selector: 'app-details',

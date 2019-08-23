@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output, OnDestroy, Input } from '@angular/core';
-import {Contact} from '../../contact/contact.model';
-import { ContactsService } from '../../contacts/contacts.service';
+import {Contact} from '../../_models/contact.model';
+import { ContactsService } from '../../_services/contacts.service';
 import { Subscription } from 'rxjs';
 
 
