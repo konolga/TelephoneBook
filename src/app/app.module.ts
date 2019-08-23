@@ -15,10 +15,12 @@ import { DetailsComponent } from './contact/details/details.component';
 import { HeaderComponent } from './header/header.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { MaterialModule} from './material.module';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './_routes/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
-
+import { AlertifyService} from './_services/alertify.service';
+import { AuthService} from './_services/auth.service';
+import { AuthGuard} from './_guards/auth.guard';
 
 @NgModule({
    declarations: [
@@ -43,7 +45,11 @@ import { SignupComponent } from './signup/signup.component';
       FlexLayoutModule,
       ReactiveFormsModule
    ],
-   providers: [],
+   providers: [
+    AlertifyService,
+    AuthService,
+    AuthGuard
+   ],
    bootstrap: [
       AppComponent
    ]

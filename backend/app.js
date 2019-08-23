@@ -4,8 +4,9 @@ const path = require('path')
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const contactsRoutes = require("./routes/contacts");
+const authRoutes = require("./routes/auth");
 const dotenv = require('dotenv');
-
+const expressValidator = require('express-validator');
 
 
 dotenv.config();
@@ -20,10 +21,12 @@ mongoose
     console.log(error)
   });
 
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(expressValidator());
 app.use("/", express.static(path.join(__dirname, "angular")));
-//app.use(fileUpload());
+//app.use(fileUpload())
 
 
 app.use((req, res, next) => {
@@ -39,7 +42,9 @@ app.use((req, res, next) => {
   next();
 });
 
+
 app.use("/", contactsRoutes);
+app.use("/api/auth", authRoutes);
 app.use("/api/contacts", contactsRoutes);
 app.use((req, res, next)=>{
 res.sendFile(path.join(__dirname, "angular", "index.html"))

@@ -2,7 +2,7 @@ import { Component,  OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { ContactsService } from '../../_services/contacts.service';
 import { NgForm } from '@angular/forms';
-import {Contact} from '../../_models/contact.model';
+import {Contact} from '../../_models/contact';
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',

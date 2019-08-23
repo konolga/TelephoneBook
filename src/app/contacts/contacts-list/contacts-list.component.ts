@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Output, OnDestroy, Input } from '@angular/core';
-import {Contact} from '../../_models/contact.model';
+import {Contact} from '../../_models/contact';
 import { ContactsService } from '../../_services/contacts.service';
 import { Subscription } from 'rxjs';
 
