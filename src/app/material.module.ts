@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 
 import {
+  MatFormFieldModule,
   MatButtonModule,
   MatSidenavModule,
   MatMenuModule,
   MatToolbarModule,
   MatIconModule,
   MatCardModule,
-  MatFormFieldModule,
   MatInputModule,
   MatDialogModule,
   MatListModule,

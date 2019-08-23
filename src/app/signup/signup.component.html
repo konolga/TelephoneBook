@@ -1,0 +1,47 @@
+<!-- register page html -->
+<div id="login-box">
+  <div>
+      <mat-toolbar color ="primary" class="top">
+          <h1>REGISTER NOW</h1>
+        </mat-toolbar >
+  </div>
+    <div class="left">
+
+
+<mat-card-content>
+
+  <form #registerForm="ngForm" (ngSubmit)="signUp()">
+     <mat-form-field class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Enter your email"
+            [formControl]="email" required  [(ngModel)]="model.email">
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="full-width" >
+                    <mat-label>Password</mat-label>
+                    <input name="password" matInput [type]="hide ? 'password' : 'text'"
+                    [(ngModel)]="model.password" placeholder="Enter your password" required >
+                    <button mat-icon-button color="primary" matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                      </mat-form-field>
+
+         <button mat-raised-button class = "submit" color="primary" type="submit">Register</button>
+         <button mat-raised-button class = "cancel" color="warn" type="button" (click)="cancel()">Cancel</button>
+
+  </form>
+</mat-card-content>
+</div>
+
+<div class="right">
+    <mat-card-content>
+    <span class="loginwith">sign in with<br />social network</span>
+    <button mat-raised-button class="social-signin facebook">Log in with facebook</button>
+    <button mat-raised-button class="social-signin twitter">Log in with Twitter</button>
+    <button mat-raised-button class="social-signin google">Log in with Google+</button>
+  </mat-card-content>
+</div>
+
+<div class="or">OR</div>
+</div>

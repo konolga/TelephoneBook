@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TextMaskModule } from 'angular2-text-mask';
 import { CommonModule } from '@angular/common';
@@ -9,7 +9,6 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 
 
 import { AppComponent } from './app.component';
-import { ServerComponent } from './server/server.component';
 import { ContactsListComponent } from './contacts/contacts-list/contacts-list.component';
 import { CreateComponent } from './contact/create/create.component';
 import { DetailsComponent } from './contact/details/details.component';
@@ -17,21 +16,20 @@ import { HeaderComponent } from './header/header.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { MaterialModule} from './material.module';
 import { AppRoutingModule } from './app-routing.module';
-// import { UploadModule } from './upload.module';
 import { HomeComponent } from './home/home.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
    declarations: [
       AppComponent,
-      ServerComponent,
       ContactsListComponent,
       CreateComponent,
       DetailsComponent,
       HeaderComponent,
       ContactsComponent,
-      //UploadModule,
-      HomeComponent
+      HomeComponent,
+      SignupComponent
    ],
    imports: [
       BrowserModule,
@@ -42,8 +40,8 @@ import { HomeComponent } from './home/home.component';
       HttpClientModule,
       TextMaskModule,
       CommonModule,
-      FlexLayoutModule
-      //UploadModule
+      FlexLayoutModule,
+      ReactiveFormsModule
    ],
    providers: [],
    bootstrap: [
