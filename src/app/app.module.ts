@@ -18,32 +18,36 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { MaterialModule} from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 // import { UploadModule } from './upload.module';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ServerComponent,
-    ContactsListComponent,
-    CreateComponent,
-    DetailsComponent,
-    HeaderComponent,
-    ContactsComponent
-    // UploadModule
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    FormsModule,
-    HttpClientModule,
-    TextMaskModule,
-    CommonModule,
-    FlexLayoutModule
-    // UploadModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      ServerComponent,
+      ContactsListComponent,
+      CreateComponent,
+      DetailsComponent,
+      HeaderComponent,
+      ContactsComponent,
+      //UploadModule,
+      HomeComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      BrowserAnimationsModule,
+      MaterialModule,
+      FormsModule,
+      HttpClientModule,
+      TextMaskModule,
+      CommonModule,
+      FlexLayoutModule
+      //UploadModule
+   ],
+   providers: [],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule { }
