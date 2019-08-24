@@ -16,13 +16,13 @@ exports.signup = async (req, res) => {
     })
     const user = await new User(req.body)
     await user.save();
-    res.status(200).json({
+    return res.status(200).json({
         message: "Success!"
     });
 };
 
 
-exports.signin = (req, res) => {
+exports.login = (req, res) => {
     //find the user based on email
     const { email, password} = req.body
     User.findOne({ email}, (err, user) => {

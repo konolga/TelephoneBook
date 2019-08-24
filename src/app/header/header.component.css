@@ -45,3 +45,12 @@ a:active {
 body {
   margin: 0;
 }
+
+form {
+  display: flex;
+  align-items: flex-end;
+}
+.loginForm{
+  position: absolute;
+  right: 20px;
+}

@@ -25,11 +25,13 @@ export class SignupComponent implements OnInit {
             '';
   }
   signUp() {
-    this.authService.signup(this.model).subscribe(() =>{
-      this.alertify.success('registration successful');
-      this.router.navigate(['/contacts']);
+   this.authService.signup(this.model).subscribe(() => {
+     this.alertify.success('logged in successfully');
+
     }, error => {
-      this.alertify.error(error);
+      this.alertify.error('error');
+    }, () => {
+      this.cancel();
     });
   }
 

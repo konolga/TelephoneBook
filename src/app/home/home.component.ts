@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../_services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -10,11 +11,11 @@ export class HomeComponent implements OnInit {
   registerMode = false;
   values: any;
 
-  constructor() { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {
   }
-  
+
   registerToggle() {
     this.registerMode = true;
   }
@@ -22,5 +23,9 @@ export class HomeComponent implements OnInit {
 
   cancelRegisterMode(registerMode: boolean){
     this.registerMode = false;
+  }
+
+  loggedIn() {
+    return this.authService.loggedIn();
   }
 }

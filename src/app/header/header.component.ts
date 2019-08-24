@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   // @Output() featureSelected = new EventEmitter<string>();
   model: any = {};
+  @Output() email: string;
 
   constructor(public authService: AuthService, private alertify: AlertifyService, private router: Router) {}
   ngOnInit() {}
@@ -20,11 +21,12 @@ export class HeaderComponent {
   } */
 
   login() {
-    this.authService.login(this.model).subscribe(next => {
+    this.authService.login(this.model).subscribe(() => {
         this.alertify.success('logged in successfully');
+
       },
       error => {
-        this.alertify.error(error);
+        this.alertify.error('error');
       }, () => {
         this.router.navigate(['/contacts']);
       });
@@ -36,7 +38,7 @@ export class HeaderComponent {
   logout() {
     localStorage.removeItem('token');
     this.alertify.message('logged out');
-    this.router.navigate(['/home']);
+    this.router.navigate(['/upload']);
   }
 }
 

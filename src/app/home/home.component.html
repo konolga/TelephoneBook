@@ -1,11 +1,11 @@
   <!-- home page html -->
-  <div class="container mt-5">
+  <div *ngIf="!loggedIn()" class="container mt-5">
     <div *ngIf="!registerMode" class="text-center">
         <h1>Telephone book</h1>
         <p class="lead">Keep your contacts in one place!</p>
         <div class="text-center">
-          <button class="btn btn-primary btn-lg" (click)="registerToggle()">Register</button>
-          <button class="btn btn-info btn-lg">Learn More</button>
+          <button mat-raised-button class = "submit" color="primary"  (click)="registerToggle()">Register</button>
+
         </div>
       </div>
 

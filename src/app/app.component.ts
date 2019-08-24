@@ -17,10 +17,13 @@ export class AppComponent {
   onNavigate(feature: string) {
   this.loadedFeature = feature; */
 
-ngOnInit() {
+  ngOnInit() {
     const token = localStorage.getItem('token');
+
+
     if (token) {
       this.authService.decodedToken = this.jwtHelper.decodeToken(token);
+
     }
   }
 }
