@@ -45,7 +45,7 @@ app.use((req, res, next) => {
 
 app.use("/", contactsRoutes);
 app.use("/api/auth", authRoutes);
-app.use("/api/contacts", contactsRoutes);
+app.use("/contacts", contactsRoutes);
 app.use((req, res, next)=>{
 res.sendFile(path.join(__dirname, "angular", "index.html"))
 })
