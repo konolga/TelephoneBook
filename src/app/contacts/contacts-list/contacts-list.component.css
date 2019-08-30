@@ -1,20 +1,40 @@
-.header-image {
-  background-image: url('../../../assets/phone-img.jpg');
-  background-size: cover;
-  }
 
-  mat-card-title:hover{
-    cursor:pointer
-  }
+.icon {
+  text-align: center;
 
-  mat-card{
+}
+
+mat-form-field {
+  width: 100%;
+
+}
+
+
+  mat-card-avatar {
     max-width: 400px;
   }
 
-  .hover-color:hover{
-    color: #fff;
-    background-color:#AD1457;
+.hover-color:hover{
+    color:white;
+    background-color:#3f51b5;
+    text-decoration-color: #fff;
+    cursor:pointer
   }
+
+  .card{
+    color:#3f51b5;
+    background-color:white;
+    text-decoration-color: #fff;
+    cursor:pointer
+  }
+
+
+
   .selected-color{
     background-color:#AD6666;
+  }
+
+
+  a {
+    display: grid;
   }
