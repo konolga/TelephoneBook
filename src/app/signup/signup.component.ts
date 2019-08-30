@@ -12,8 +12,10 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent implements OnInit {
   @Output() cancelRegister = new EventEmitter();
+  @Output() isRegistered = new EventEmitter();
   model: any = {};
   hide = true;
+  registered = false;
   email = new FormControl('', [Validators.required, Validators.email]);
   constructor(private authService: AuthService, private alertify: AlertifyService, private router: Router) { }
 
@@ -26,10 +28,11 @@ export class SignupComponent implements OnInit {
   }
   signUp() {
    this.authService.signup(this.model).subscribe(() => {
-     this.alertify.success('logged in successfully');
+    this.alertify.success('signed up successfully');
 
     }, error => {
       this.alertify.error('error');
+      console.log(error);
     }, () => {
       this.cancel();
     });

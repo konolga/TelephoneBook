@@ -9,13 +9,14 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  baseUrl = environment.apiUrl + 'auth/';
+  baseUrl = environment.apiUrl + '/auth';
   jwtHelper = new JwtHelperService();
   decodedToken: any;
+  regStatus = false;
 
 constructor(private http: HttpClient, private router: Router) { }
 login(model: any) {
-    return this.http.post(this.baseUrl + 'login', model)
+    return this.http.post(this.baseUrl + '/login', model)
     .pipe(
       map((response: any) => {
         const user = response;
@@ -27,12 +28,13 @@ login(model: any) {
     );
   }
   signup(model: any) {
-    return this.http.post(this.baseUrl + 'signup', model);
+    return this.http.post(this.baseUrl + '/signup', model);
   }
 
   loggedIn() {
     const token = localStorage.getItem('token');
-   
     return !this.jwtHelper.isTokenExpired(token);
   }
+
+
 }

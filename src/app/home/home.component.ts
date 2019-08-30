@@ -9,7 +9,9 @@ import { AuthService } from '../_services/auth.service';
 })
 export class HomeComponent implements OnInit {
   registerMode = false;
+  isRegistered = false;
   values: any;
+
 
   constructor(public authService: AuthService) { }
 
@@ -28,4 +30,5 @@ export class HomeComponent implements OnInit {
   loggedIn() {
     return this.authService.loggedIn();
   }
+
 }
