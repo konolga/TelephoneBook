@@ -1,94 +1,98 @@
-<mat-sidenav-container>
+<mat-toolbar color="primary">
 
-  <mat-sidenav *ngIf="loggedIn()" #siden role="navigation">
+    <div fxHide.gt-sm *ngIf="loggedIn()">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <div>
+      <a routerLink="/">
+        <mat-icon class="icon">home</mat-icon>
+        Telephone Book
+      </a>
+    </div>
+
+
+    <div *ngIf="loggedIn()" fxFlex fxLayout fxLayoutAlign="flex-end" fxHide fxShow.gt-sm>
+      <ul fxLayout fxLayoutGap="25px" class="navigation-items">
+        <li>
+          <a routerLink="/contacts">
+            <mat-icon class="icon">contacts</mat-icon>
+            <span class="label">All contacts</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/create">
+            <mat-icon class="icon">add</mat-icon>
+            <span class="label">New Contact</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/upload">
+            <mat-icon class="icon">create</mat-icon>
+            <span class="label">Upload contacts</span>
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/" (click)="logout()">
+            <mat-icon class="icon">logout</mat-icon>
+            <span class="label">LogOut</span>
+          </a>
+        </li>
+        <li>
+
+         <!--  <span>Welcome!</span>
+           {{authService.decodedToken?.unique_name|titlecase}} -->
+
+
+        </li>
+      </ul>
+    </div>
+    <div class="loginForm">
+      <form *ngIf="!loggedIn()" #loginForm="ngForm" (ngSubmit)="login()">
+        <input matInput class="form-control mr-sm-2" type="email" name="email" placeholder="Email" required
+          [(ngModel)]="model.email">
+        <input matInput class="form-control mr-sm-2" type="password" name="password" placeholder="Password" required
+          [(ngModel)]="model.password">
+        <button [disabled]="!loginForm.valid" mat-raised-button color="basic" type="submit">Login</button>
+      </form>
+    </div>
+
+
+  </mat-toolbar>
+
+<mat-sidenav-container autosize>
+
+  <mat-sidenav #sidenav mode="side" autosize>
     <a mat-list-item routerLink="/contacts" routerLinkActive="mat-accent">
-      <mat-icon class="icon">home</mat-icon>
+      <mat-icon class="icon">contacts</mat-icon>
       <span class="label">All contacts</span>
     </a>
 
     <a mat-list-item routerLink="/create" routerLinkActive="mat-accent">
-      <mat-icon class="icon">dashboard</mat-icon>
+      <mat-icon class="icon">add</mat-icon>
       <span class="label">New Contact</span>
     </a>
 
     <a mat-list-item routerLink="/upload" routerLinkActive="mat-accent">
-      <mat-icon class="icon">dialpad</mat-icon>
+      <mat-icon class="icon">create</mat-icon>
       <span class="label">Upload contacts</span>
     </a>
 
-    <a mat-list-item (click)="logout()">
-      <mat-icon class="icon">input</mat-icon>
+    <a mat-list-item (click)="logout()" routerLink="/" routerLinkActive="mat-accent">
+      <mat-icon class="icon">logout</mat-icon>
       <span class="label">LogOut</span>
     </a>
   </mat-sidenav>
 
 
+
+
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <div fxHide.gt-xs>
-        <button mat-icon-button (click)='siden.toggle()'>
-          <mat-icon >menu</mat-icon>
-        </button>
-      </div>
-      <div>
-        <a routerLink="/">
-          Telephone Book
-        </a>
-      </div>
 
 
-      <div *ngIf="loggedIn()" fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
-        <ul fxLayout fxLayoutGap="20px" class="navigation-items">
-          <li>
-            <a routerLink="/contacts">
-              <mat-icon class="icon">home</mat-icon>
-              <span class="label">All contacts</span>
-            </a>
-          </li>
-          <li>
-            <a routerLink="/create">
-              <mat-icon class="icon">dashboard</mat-icon>
-              <span class="label">New Contact</span>
-            </a>
-          </li>
-          <li>
-            <a routerLink="/upload">
-              <mat-icon class="icon">dialpad</mat-icon>
-              <span class="label">Upload contacts</span>
-            </a>
-          </li>
-
-          <li>
-            <a (click)="logout()">
-              <mat-icon class="icon">input</mat-icon>
-              <span class="label">LogOut</span>
-            </a>
-          </li>
-          <li>
-            <a >
-              <!-- Welcome, {{authService.decodedToken?.unique_name|titlecase}}! -->
-              Welcome!
-            </a>
-          </li>
-        </ul>
-      </div>
-<div class="loginForm">
-  <form *ngIf="!loggedIn()" #loginForm="ngForm" (ngSubmit)="login()">
-    <input matInput class="form-control mr-sm-2" type="email" name="email" placeholder="Email" required
-      [(ngModel)]="model.email">
-    <input matInput class="form-control mr-sm-2" type="password" name="password" placeholder="Password" required
-      [(ngModel)]="model.password">
-    <button [disabled]="!loginForm.valid" mat-raised-button color="basic" type="submit">Login</button>
-  </form>
-</div>
-
-
-    </mat-toolbar>
-
-
-
-
-
-
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

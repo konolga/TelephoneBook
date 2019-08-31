@@ -1,16 +1,31 @@
 mat-sidenav-container {
-  height: 150px;
+  min-width: 60px;
+  background-color:  #3f51b5
 }
 
 mat-sidenav-content{
-  height: 100px;
+  width:100%;
+  height: calc(100vh - 100px);
+  background-color:  white
 }
 mat-sidenav{
-  height: 150px;
-  background-color:  #3f51b5
+  margin-left: 20px;
+
+  background-color:  #3f51b5;
+
 }
+
+.label{
+  display: inline-block;
+  margin-top: 5px;
+  line-height: 30px;
+  margin-left: 5px;
+font-size: 20px;
+}
+
+
 a {
-  text-decoration: none;
+text-decoration: none;
 color: white;
 }
 
@@ -36,12 +51,6 @@ a:active {
   width: 15%;
 }
 
-.label {
-  display: inline-block;
-  line-height: 30px;
-  margin: 0;
-  width: 85%;
-}
 body {
   margin: 0;
 }
