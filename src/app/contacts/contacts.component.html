@@ -1,15 +1,19 @@
 
-    <div class="col-md-12 col-xs-12">
-        <div class="col-md-6 col-xs-6">
+    <div class="col-xs-12 col-md-12">
+
+        <div class="col-md-6 pull-right">
+            <app-details
+            *ngIf="selectedContact"
+            [contact]="selectedContact">
+          </app-details>
+            </div>
+
+
+        <div class="col-md-6 pull-left">
           <app-contacts-list
           (contactWasSelected)="selectedContact = $event"
           ></app-contacts-list>
         </div>
 
-    <div class="col-md-6 col-xs-6">
-    <app-details
-    *ngIf="selectedContact"
-     [contact]="selectedContact">
-  </app-details>
-    </div>
+
     </div>

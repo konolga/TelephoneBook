@@ -1,32 +1,55 @@
-<mat-card class="col-md-12" *ngIf="contact">
-
-        <div class="col-md-12">
-          <img alt="Contact details" class="img-responsive">
-        </div>
+<div class="card">
 
 
 
-          <div class="col-md-12">
-            <h1 class="list-group-item-heading">{{contact.name}}</h1>
-        </div>
+  <mat-toolbar color="primary" class="col-md-12">
+
+      <mat-toolbar-row class="card-header">
+          <span> Selected contact details</span>
+        </mat-toolbar-row>
+  </mat-toolbar>
 
 
-            <div class="col-md-12">
-              <h1 class="list-group-item-text">{{contact.telephone}}</h1>
-            </div>
-            
-          <div class="row col-md-12">
-              <div class="row col-md-6">
-                <a mat-raised-button color="primary"
-                [routerLink]="['/edit', contact.id]">UPDATE</a>
+  <mat-card class="col-md-12" *ngIf="contact">
+
+
+
+
+
+        <div class = "card-avatar">
+            <mat-icon  mat-card-avatar class="img-responsive">contact_phone</mat-icon>
+
           </div>
 
 
-              <div class="row col-md-6">
-                <button mat-raised-button color="warn"
-                (click)="onDelete(contact.id)">DELETE</button>
-              </div>
-          </div>
+          <mat-card-header>
+      <mat-card-title >
+        <h1 class="heading">{{contact.name}}</h1>
+      </mat-card-title>
 
-</mat-card>
 
+      <mat-card-subtitle>
+        <h1 class="text">{{contact.telephone}}</h1>
+      </mat-card-subtitle>
+
+
+
+    </mat-card-header>
+    <mat-card-actions>
+
+      <div class="row col-md-12">
+        <div class="button col-md-6">
+          <a mat-raised-button color="primary" [routerLink]="['/edit', contact.id]">UPDATE</a>
+        </div>
+
+
+        <div class="button col-md-6">
+          <button mat-raised-button color="warn" (click)="onDelete(contact.id)">DELETE</button>
+        </div>
+      </div>
+
+    </mat-card-actions>
+
+
+  </mat-card>
+</div>
