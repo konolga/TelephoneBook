@@ -1,29 +1,24 @@
 <div class="card">
-
-
-
   <mat-toolbar color="primary" class="col-md-12">
-
-      <mat-toolbar-row class="card-header">
-          <span> Selected contact details</span>
-        </mat-toolbar-row>
+    <mat-toolbar-row class="card-header">
+      <span (click)="Animate()"> Selected contact details</span>
+    </mat-toolbar-row>
   </mat-toolbar>
 
 
-  <mat-card class="col-md-12" *ngIf="contact">
+  <mat-card
+  class="col-md-12"
+   *ngIf="contact"
+   [@state]="state"
+   (@state.done)="animationEnded($event)"
+   >
+    <div class="card-avatar">
+      <mat-icon mat-card-avatar class="img-responsive">contact_phone</mat-icon>
+    </div>
 
 
-
-
-
-        <div class = "card-avatar">
-            <mat-icon  mat-card-avatar class="img-responsive">contact_phone</mat-icon>
-
-          </div>
-
-
-          <mat-card-header>
-      <mat-card-title >
+    <mat-card-header>
+      <mat-card-title>
         <h1 class="heading">{{contact.name}}</h1>
       </mat-card-title>
 
@@ -31,8 +26,6 @@
       <mat-card-subtitle>
         <h1 class="text">{{contact.telephone}}</h1>
       </mat-card-subtitle>
-
-
 
     </mat-card-header>
     <mat-card-actions>
@@ -49,7 +42,5 @@
       </div>
 
     </mat-card-actions>
-
-
   </mat-card>
 </div>

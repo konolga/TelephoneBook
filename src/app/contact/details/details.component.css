@@ -5,13 +5,14 @@
   margin:  auto;
   color:#3f51b5;
 
+
 }
 .card-avatar {
   margin-right:  40px;
 }
 
 .card {
-  max-width: 400px;
+  width: 400px;
   margin-top: 60px;
   position: fixed;
   text-align: center;

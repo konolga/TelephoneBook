@@ -34,7 +34,7 @@ ngOnInit() {
   this.contactsService.getContacts();
   this.contactsSub = this.contactsService.getContactsUpdateListener()
       .subscribe((contacts: Contact[]) => {
-        if(this.searchTerm) { this.contacts = this.filteredContacts } else {this.contacts = contacts;}
+        if (this.searchTerm) { this.contacts = this.filteredContacts; } else {this.contacts = contacts;}
       });
 }
 
