@@ -17,3 +17,9 @@
         </div>
       </div>
     </div>
+
+    <div *ngIf="loggedIn()" class="container mt-5">
+      <div *ngIf="!registerMode" class="text-center">
+          <h1>My telephone book</h1>
+        </div>
+      </div>

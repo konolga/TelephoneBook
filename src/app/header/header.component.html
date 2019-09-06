@@ -18,26 +18,26 @@
       <ul fxLayout fxLayoutGap="25px" class="navigation-items">
         <li>
           <a routerLink="/contacts">
-            <mat-icon class="icon">contacts</mat-icon>
+            <mat-icon class="icon">group</mat-icon>
             <span class="label">All contacts</span>
           </a>
         </li>
         <li>
           <a routerLink="/create">
-            <mat-icon class="icon">add</mat-icon>
+            <mat-icon class="icon">person_add</mat-icon>
             <span class="label">New Contact</span>
           </a>
         </li>
         <li>
           <a routerLink="/upload">
-            <mat-icon class="icon">create</mat-icon>
+            <mat-icon class="icon upload">group_add</mat-icon>
             <span class="label">Upload contacts</span>
           </a>
         </li>
 
         <li>
           <a routerLink="/" (click)="logout()">
-            <mat-icon class="icon">logout</mat-icon>
+            <mat-icon class="icon logout">exit_to_app</mat-icon>
             <span class="label">LogOut</span>
           </a>
         </li>
@@ -67,22 +67,22 @@
 
   <mat-sidenav #sidenav mode="side" autosize>
     <a mat-list-item routerLink="/contacts" routerLinkActive="mat-accent">
-      <mat-icon class="icon">contacts</mat-icon>
+      <mat-icon class="icon">group</mat-icon>
       <span class="label">All contacts</span>
     </a>
 
     <a mat-list-item routerLink="/create" routerLinkActive="mat-accent">
-      <mat-icon class="icon">add</mat-icon>
+      <mat-icon class="icon">person_add</mat-icon>
       <span class="label">New Contact</span>
     </a>
 
     <a mat-list-item routerLink="/upload" routerLinkActive="mat-accent">
-      <mat-icon class="icon">create</mat-icon>
+      <mat-icon class="icon">group_add</mat-icon>
       <span class="label">Upload contacts</span>
     </a>
 
     <a mat-list-item (click)="logout()" routerLink="/" routerLinkActive="mat-accent">
-      <mat-icon class="icon">logout</mat-icon>
+      <mat-icon class="icon">exit_to_app</mat-icon>
       <span class="label">LogOut</span>
     </a>
   </mat-sidenav>

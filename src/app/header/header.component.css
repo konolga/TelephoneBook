@@ -17,10 +17,7 @@ mat-sidenav{
 
 .label{
   display: inline-block;
-  margin-top: 5px;
-  line-height: 30px;
-  margin-left: 5px;
-font-size: 20px;
+  margin-left: 10px;
 }
 
 
@@ -43,12 +40,19 @@ a:active {
 
 .icon {
   display: inline-block;
-  height: 30px;
   margin: 0 auto;
-  padding-right: 5px;
-  text-align: center;
-  vertical-align: middle;
-  width: 15%;
+
+  vertical-align: text-bottom;
+  font-size: 24px;
+}
+
+.logout {
+margin-right: -5px;
+}
+
+.upload {
+
+  font-size: 28px;
 }
 
 body {
@@ -63,3 +67,4 @@ form {
   position: absolute;
   right: 20px;
 }
+
