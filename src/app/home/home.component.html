@@ -4,7 +4,7 @@
         <h1>Telephone book</h1>
         <p class="lead">Keep your contacts in one place!</p>
         <div class="text-center">
-          <button mat-raised-button class = "submit" color="primary"  (click)="registerToggle()">Register</button>
+          <button *ngIf="!isRegistered" mat-raised-button class = "submit" color="primary"  (click)="registerToggle()">Register</button>
 
         </div>
       </div>
@@ -12,7 +12,10 @@
       <div *ngIf="registerMode" class="container">
         <div class="row justify-content-center">
           <div class="col-4">
-            <app-signup (cancelRegister)="cancelRegisterMode($event)"></app-signup>
+            <app-signup
+            (cancelRegister)="cancelRegisterMode($event)"
+            (markAsRegistered)="markAsRegistered($event)"
+            ></app-signup>
           </div>
         </div>
       </div>
@@ -23,3 +26,7 @@
           <h1 >My telephone book</h1>
         </div>
       </div>
+
+      <div *ngIf="isRegistered" class="container mt-5">
+            <h4>You are registered successfully, please now login</h4>
+        </div>

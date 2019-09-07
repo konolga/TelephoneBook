@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../_services/auth.service';
 import { Router } from '@angular/router';
@@ -13,13 +13,13 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   registerMode = false;
-  isRegistered = false;
   values: any;
-
+  isRegistered = false;
 
   constructor(public authService: AuthService, private router: Router) { }
 
   ngOnInit() {
+
   }
 
 
@@ -33,6 +33,9 @@ export class HomeComponent implements OnInit {
     this.registerMode = false;
   }
 
+  markAsRegistered (isRegistered: boolean){
+    this.isRegistered = true;
+  }
   loggedIn() {
     return this.authService.loggedIn();
   }
