@@ -3,14 +3,19 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
 import {map} from 'rxjs/operators';
-import { SocialUser } from 'angularx-social-login';
+
+
+
+
 @Injectable({ providedIn: 'root' })
 export class FbAuthService {
   baseUrl = environment.apiUrl + '/auth';
 
 constructor(private http: HttpClient, private router: Router) { }
 
+
 socialLogin(data: any) {
+
   return this.http.post(this.baseUrl + '/social-login', data)
    .pipe(
     map((response: any) => {

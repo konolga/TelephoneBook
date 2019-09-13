@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:8090/api'
+  apiUrl: 'http://telephonebook.us-east-2.elasticbeanstalk.com/api'
+  //apiUrl: 'http://localhost:8090/api'
 };
 
 /*

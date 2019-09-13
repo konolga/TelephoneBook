@@ -21,6 +21,7 @@ import { SignupComponent } from './signup/signup.component';
 import { AlertifyService} from './_services/alertify.service';
 import { AuthService} from './_services/auth.service';
 import { AuthGuard} from './_guards/auth.guard';
+import { FbAuthService } from './_services/fbAuth.service';
 
 
 
@@ -30,7 +31,9 @@ const config = new AuthServiceConfig([
     provider: new FacebookLoginProvider('2350528848532809')
   }
 ]);
-
+export function provideConfig() {
+  return config;
+}
 
 
 @NgModule({
@@ -55,12 +58,19 @@ const config = new AuthServiceConfig([
       CommonModule,
       FlexLayoutModule,
       ReactiveFormsModule,
-      SocialLoginModule.initialize(config)
+      SocialLoginModule
    ],
    providers: [
+
     AlertifyService,
     AuthService,
-    AuthGuard
+    AuthGuard,
+    FbAuthService,
+    {
+      provide: AuthServiceConfig,
+      useFactory: provideConfig
+    },
+
    ],
    bootstrap: [
       AppComponent
