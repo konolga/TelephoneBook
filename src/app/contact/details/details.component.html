@@ -1,4 +1,4 @@
-<div class="card">
+<div  *ngIf="contact" class="card">
   <mat-toolbar color="primary" class="col-md-12">
     <mat-toolbar-row class="card-header">
       <span (click)="Animate()"> Selected contact details</span>
@@ -8,7 +8,7 @@
 
   <mat-card
   class="col-md-12"
-   *ngIf="contact"
+
    [@state]="state"
    (@state.done)="animationEnded($event)"
    >
