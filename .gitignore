@@ -22,6 +22,8 @@ speed-measure-plugin.json
 *.launch
 .settings/
 *.sublime-workspace
+.editorconfig
+tslint.json
 
 # IDE - VSCode
 .vscode/*
@@ -30,6 +32,7 @@ speed-measure-plugin.json
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
+
 
 # misc
 /.sass-cache
@@ -47,8 +50,7 @@ Thumbs.db
 
 
 TelephoneBook.zip
-/document.docx
+document.docx
 /backend/.env
-/backend/backend.zip
-/backend/Archive.zip
-/backend/angular
+backend/angular
+backend/node_modules
