@@ -23,7 +23,7 @@ speed-measure-plugin.json
 .settings/
 *.sublime-workspace
 .editorconfig
-tslint.json
+/tslint.json
 
 # IDE - VSCode
 .vscode/*
@@ -49,8 +49,8 @@ testem.log
 Thumbs.db
 
 
-TelephoneBook.zip
-document.docx
+
+/document.docx
 /backend/.env
-backend/angular
-backend/node_modules
+/backend/angular
+/backend/node_modules
